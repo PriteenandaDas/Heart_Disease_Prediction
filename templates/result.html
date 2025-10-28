@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 40px;
+    }
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 450px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .header{
+      font-size: 2em;
+      font-weight: bold;
+      color: #34495e;
+      margin-bottom: 25px;
+    }
+    .risk_category h3,.suggestions h3 {
+      margin-top: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #34495e;
+      margin-bottom: 10px;
+    }
+     .risk_category p {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .suggestions p {
+      font-size: 1em;
+      color: #555;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+    .goback{
+      margin-top:10%;
+      padding:10px;
+      background-color: midnightblue;
+      color:azure;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+     .goback:hover {
+      background-color:rgb(61, 61, 146);
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Prediction Result</div>
+        <div class="risk_category">
+          <h3>Risk Category</h3>
+          <p>{{ prediction_text }}</p>
+        </div>
+        <div class="suggestions">
+          <h3>Health Suggestions</h3>
+          <p>{{ suggestion_text }}</p>
+        </div>
+        <a href="/" class="goback">Back to Form</a>
+    </div>
+    <script>
+  const predictionText = "{{ prediction_text }}"; 
+  const color = predictionText.includes("High") ? "red" : "green";
+  document.querySelector(".risk_category p").style.color = color;
+  document.querySelector(".risk_category p").textContent =  predictionText;
+</script>
+</body>
+</html>
