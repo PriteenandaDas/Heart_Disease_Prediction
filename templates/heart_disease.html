@@ -6,52 +6,79 @@
 </head>
 <body>
   <div id="form_container">
-  <h2>Enter Patient Details</h2>
-  <form action="/predict" method="post">
-    <label>Age:</label>
-    <input type="number" name="age" required><br>
 
+  <h2>Enter Patient Details</h2>
+
+  <form action="/predict" method="post">
+  <div class="form-group">
+    <label>Age:</label>
+    <input type="number" name="age" required>
+  </div>
+
+  <div class="form-group">
     <label>Sex:</label>
     <select name="sex" required>
       <option value="1">Male</option>
       <option value="0">Female</option>
-    </select><br><br>
+    </select>
+  </div>
 
+  <div class="form-group">
     <label>Chest Pain Type (0-3):</label>
-    <input type="number" name="cp" min="0" max="3" required><br><br>
+    <input type="number" name="cp" min="0" max="3" required>
+  </div>
 
+  <div class="form-group">
     <label>Resting Blood Pressure (94-200):</label>
-    <input type="number" name="trestbps" required><br><br>
+    <input type="number" name="trestbps" required>
+  </div>
 
+  <div class="form-group">
     <label>Serum Cholesterol (126-564):</label>
-    <input type="number" name="chol" required><br><br>
+    <input type="number" name="chol" required>
+  </div>
 
+  <div class="form-group">
     <label>Maximum Heart Rate Achieved (71-202):</label>
-    <input type="number" name="thalach" required><br><br>
+    <input type="number" name="thalach" required>
+  </div>
 
+  <div class="form-group">
     <label>Exercise Induced Angina:</label>
     <select name="exang" required>
       <option value="1">Yes</option>
       <option value="0">No</option>
-    </select><br><br>
+    </select>
+  </div>
 
+  <div class="form-group">
     <label>ST Depression Induced by Exercise (0.0-6.2):</label>
-    <input type="number" step="0.1" name="oldpeak" required><br><br>
+    <input type="number" step="0.1" name="oldpeak" required>
+  </div>
 
+  <div class="form-group">
     <label>Slope of Peak Exercise ST Segment (0-2):</label>
-    <input type="number" name="slope" min="0" max="2" required><br><br>
+    <input type="number" name="slope" min="0" max="2" required>
+  </div>
 
+  <div class="form-group">
     <label>Number of Major Vessels (0-3):</label>
-    <input type="number" name="ca" min="0" max="3" required><br><br>
+    <input type="number" name="ca" min="0" max="3" required>
+  </div>
 
+  <div class="form-group">
     <label>Thal:</label>
     <select name="thal" required>
       <option value="1">Normal</option>
       <option value="2">Fixed Defect</option>
       <option value="3">Reversible Defect</option>
-    </select><br><br>
+    </select>
+  </div>
 
-    <input type="submit" value="Submit" id="submit">
+  <div class="button-container">
+    <button id="submit">Predict</button>
+  </div>
+  
   </form>
   </div>
 </body>
