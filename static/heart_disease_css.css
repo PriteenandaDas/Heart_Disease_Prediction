@@ -59,7 +59,8 @@ select:focus {
 .button-container {
   display: flex;
   justify-content: center;
-    align-items: center;
+  align-items: center;
+  margin-bottom: 0;
 }
 
 #submit {
